@@ -154,7 +154,7 @@ section.services .heading span {
 .services-container .services-box {
   flex: 1 1 30rem;
   background: var(--bg-color);
-  padding: 3rem 2rem 20rem 3rem;
+  padding: 3rem 2rem 8rem 3rem;
   border-radius: 2rem;
   text-align: center;
   border: 0.2rem solid var(--bg-color);
@@ -241,4 +241,80 @@ section.skills .heading {
 section.skills .heading span {
   font-size: 4rem;
   color: var(--main-color);
+}
+section.contact {
+  background-color: var(--second-bg-color);
+}
+section.contact .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+section.contact .heading span {
+  color: var(--main-color);
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 6px;
+  margin: .7rem 0;
+}
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+  border-color: var(--main-color);
+  box-shadow:0 0 3rem var(--main-color); ;
+}
+.contact form .input-box input {
+  width: 49%;
+}
+.contact form textarea {
+  resize: none;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+}
+.footer .footer-text p {
+  font-size: 1.6rem;
+}
+.footer .footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;padding: .8rem;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  transition: .3s ease ;
+}
+.footer .footer-iconTop a:hover {
+  box-shadow: 0 0 3rem var(--main-color);
+}
+.footer .footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--bg-color);
 }
