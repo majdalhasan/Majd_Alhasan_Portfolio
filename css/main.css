@@ -41,7 +41,7 @@ section {
   z-index: 100;
 }
 .header.sticky {
-  border-bottom: .1rem solid rgba(0, 0, 0, .2);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
 .header .logo {
   font-size: 2.5rem;
@@ -75,6 +75,18 @@ section {
   border: 5px solid var(--main-color);
   position: relative;
   box-shadow: 0 0 3rem var(--main-color);
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .home-content h3 {
   font-size: 3.2rem;
@@ -210,14 +222,14 @@ section.skills .myskill .skill h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   font-size: 18px;
 }
 section.skills .myskill .skill h3 span {
   font-size: 12px;
   border: 1px solid var(--second-bg-color);
   color: var(--main-color);
-  padding: 3px 5px; 
+  padding: 3px 5px;
   border-radius: 6px;
 }
 section.skills .myskill .skill .progress {
@@ -225,7 +237,7 @@ section.skills .myskill .skill .progress {
   background-color: var(--second-bg-color);
   border-radius: 6px;
   position: relative;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 section.skills .myskill .skill .progress span {
   position: absolute;
@@ -279,12 +291,12 @@ section.contact .heading span {
   color: var(--text-color);
   background: var(--bg-color);
   border-radius: 6px;
-  margin: .7rem 0;
+  margin: 0.7rem 0;
 }
 .contact form .input-box input:focus,
 .contact form textarea:focus {
   border-color: var(--main-color);
-  box-shadow:0 0 3rem var(--main-color); ;
+  box-shadow: 0 0 3rem var(--main-color);
 }
 .contact form .input-box input {
   width: 49%;
@@ -310,10 +322,11 @@ section.contact .heading span {
 .footer .footer-iconTop a {
   display: inline-flex;
   justify-content: center;
-  align-items: center;padding: .8rem;
+  align-items: center;
+  padding: 0.8rem;
   background-color: var(--main-color);
   border-radius: 6px;
-  transition: .3s ease ;
+  transition: 0.3s ease;
 }
 .footer .footer-iconTop a:hover {
   box-shadow: 0 0 3rem var(--main-color);
@@ -350,12 +363,42 @@ section.contact .heading span {
     width: 100%;
     padding: 1rem 3%;
     background: var(--bg-color);
-    border-top: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+    transition: 0.3s ease;
+  }
+  .navbar.active {
+    display: block;
   }
   .navbar a {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
   }
+  .home {
+    flex-direction: column;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  .services {
+    flex-direction: column-reverse;
+  }
+  .skills .container img {
+    display: none;
+  }
+  .skills {
+    margin-top: 20rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 617px) {
 }
